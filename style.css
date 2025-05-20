@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Russo+One&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  height: 80vh;
+  background: linear-gradient(120deg, #1b1b31, #020247, #1b1b45, #011f81);
+  background-size: 600% 600%;
+  animation: gradientShift 20s ease-in-out infinite;
+  color: white;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #e3e3fc;
+}
+
+.logo img {
+  max-height: 30px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #aeb5f5;
+}
+
+.nav-links li::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #aeb5f5;
+  transition: width 0.3s ease;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.signup-btn {
+  background: #373799;
+  border: none;
+  padding: 6px 9px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-right input {
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+main {
+  padding: 2rem;
+  height: 70vh;
+}
+
+.profile-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  color: #b5b8c4;
+  font-family: Arial, sans-serif;
+}
+
+.left-panel,
+.right-panel {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.center-image {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.center-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.rank {
+  font-size: 2.5rem;
+  font-style: italic;
+  color: #cddbf0;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.animated-s {
+  font-size: 6rem;
+  font-family: 'Russo One', sans-serif;
+  color: #aeb5f5;
+  text-shadow: 0 0 10px #e7dff0, 0 0 30px #0f111b;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aka {
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+.name {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  color: #f3f7fc;
+}
+
+.korean {
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.description {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.right-panel .about-heading {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.about-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-links li {
+  margin: 0.5rem 0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.about-links li:hover {
+  background: #d1d1ff;
+}
